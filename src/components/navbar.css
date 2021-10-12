@@ -1,0 +1,32 @@
+.nav{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    padding: 2vh 5vw;
+    padding-bottom: 0;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, black 0%, transparent 100%);
+
+    transition-timing-function: ease-in;
+    transition: all .5s;
+}
+.navBlack{
+    background-color: rgba(0, 0, 0, 0.877);
+
+}
+
+.logo{
+    filter: drop-shadow(0 0 0.5rem black);
+    height: inherit ;
+}
+.userNav{
+    display: flex;
+    align-items: center;
+}
+.avatar{margin-left: 2vw;
+    margin-right: 10vw;
+    height: 2rem;
+    border-radius: 5px;
+}

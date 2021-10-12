@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Carousel from "./components/Carousel";
+import requests from "./requests";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <section className="Container">
+        <Carousel title="TOP RATED" fetchUrl={requests.fetchTopRated} isLarge />
+        <Carousel title="LATEST MOVIES" fetchUrl={requests.fetchLatest} />
+        <Carousel title="UPCOMING MOVIES" fetchUrl={requests.fetchUpcoming} />
+        <Carousel title="CRIME MOVIES" fetchUrl={requests.fetchCrime} />
+      </section>
     </div>
   );
 }
